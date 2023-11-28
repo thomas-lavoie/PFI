@@ -2,10 +2,10 @@
     <string name="app_name">PFI</string>
 
     <!-- MainActivity -->
-    <string name="loginTitre">Login</string>
+    <string name="loginTitre">Log in</string>
     <string name="usernameHint">Username</string>
     <string name="passwordHint">Password</string>
-    <string name="btnLogin">Login</string>
+    <string name="btnLogin">Log in</string>
 
     <!-- -->
     <!-- -->
