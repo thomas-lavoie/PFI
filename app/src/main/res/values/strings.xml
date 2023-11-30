@@ -2,12 +2,15 @@
     <string name="app_name">PFI</string>
 
     <!-- MainActivity -->
-    <string name="loginTitre">Log in</string>
+    <string name="loginTitle" translatable="false">Log in</string>
     <string name="usernameHint">Username</string>
     <string name="passwordHint">Password</string>
     <string name="btnLogin">Log in</string>
+    <string name="invalidLogin">Incorrect username and/or password</string>
 
-    <!-- -->
+    <!-- ProductsActivity -->
+    <string name="welcome">Welcome, %s</string>
+
     <!-- -->
     <!-- -->
     <!-- -->
