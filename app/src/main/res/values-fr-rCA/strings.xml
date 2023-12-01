@@ -12,6 +12,10 @@
     <string name="welcome">Bienvenue, %s</string>
     <string name="loginTitle">Connection</string>
 
+    <!-- ProductDetailsActivity -->
+    <string name="priceDetailed">$%s</string>
+    <string name="btnAddToCart">Ajouter au panier</string>
+
     <!-- Products -->
     <string name="sapiens">Sapiens : Une brève histoire de l\'humanité</string>
     <string name="sapiensSeller">Yuval Noah Harari</string>
@@ -77,8 +81,4 @@
     <string name="lordOfTheRingsSeller">J.R.R. Tolkien</string>
     <string name="lordOfTheRingsDesc">Une trilogie de fantasy classique explorant les thèmes du pouvoir, de l\'amitié, et de la lutte entre le bien et le mal.</string>
 
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
 </resources>

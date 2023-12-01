@@ -11,6 +11,10 @@
     <string name="welcome">Welcome, %s</string>
     <string name="loginTitle">Log in</string>
 
+    <!-- ProductDetailsActivity -->
+    <string name="priceDetailed">$%s</string>
+    <string name="btnAddToCart">Add to cart</string>
+
     <!-- Products -->
     <string name="sapiens">Sapiens: A Brief History of Humankind</string>
     <string name="sapiensSeller">Yuval Noah Harari</string>
@@ -76,8 +80,4 @@
     <string name="lordOfTheRingsSeller">J.R.R. Tolkien</string>
     <string name="lordOfTheRingsDesc">A classic fantasy trilogy exploring themes of power, friendship, and the battle between good and evil.</string>
 
-    <!-- -->
-    <!-- -->
-    <!-- -->
-    <!-- -->
 </resources>
