@@ -16,7 +16,9 @@
     <string name="sellerDetailed">Par: %s</string>
     <string name="priceDetailed">$%s</string>
     <string name="stockDetailed">Inventaire: %s</string>
+    <string name="btnBack">Retour</string>
     <string name="btnAddToCart">Ajouter au panier</string>
+    <string name="outOfStock">Ce produit est en rupture de stock</string>
 
     <!-- Products -->
     <string name="sapiens">Sapiens : Une brève histoire de l\'humanité</string>

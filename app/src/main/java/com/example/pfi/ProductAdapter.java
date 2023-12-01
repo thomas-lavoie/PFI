@@ -16,11 +16,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pfi.databinding.ActivityProductsBinding;
 
+import java.util.List;
+
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHolder> {
     Context Context;
-    Product[] Products;
+    List<Product> Products;
 
-    public ProductAdapter(Context context, Product[] products) {
+    public ProductAdapter(Context context, List<Product> products) {
         this.Context = context;
         Products = products;
     }
@@ -35,9 +37,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ProductAdapter.MyViewHolder holder, int position) {
-        int imageId = Products[position].getImageId();
-        String name = Products[position].getName();
-        String price = "$" + String.valueOf(Products[position].getPrice());
+        int imageId = Products.get(position).getImageId();
+        String name = Products.get(position).getName();
+        String price = "$" + String.valueOf(Products.get(position).getPrice());
         holder.imageView.setImageResource(imageId);
         holder.nameText.setText(name);
         holder.priceText.setText(String.valueOf(price));
@@ -47,12 +49,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
             public void onClick(View view) {
                 Intent intent = new Intent(Context, ProductDetailsActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("name", Products[holder.getAdapterPosition()].getName());
-                intent.putExtra("seller", Products[holder.getAdapterPosition()].getSeller());
-                intent.putExtra("description", Products[holder.getAdapterPosition()].getDescription());
-                intent.putExtra("imageId", Products[holder.getAdapterPosition()].getImageId());
-                intent.putExtra("price", Products[holder.getAdapterPosition()].getPrice());
-                intent.putExtra("stock", Products[holder.getAdapterPosition()].getStock());
+                intent.putExtra("name", Products.get(holder.getAdapterPosition()).getName());
+                intent.putExtra("seller", Products.get(holder.getAdapterPosition()).getSeller());
+                intent.putExtra("description", Products.get(holder.getAdapterPosition()).getDescription());
+                intent.putExtra("imageId", Products.get(holder.getAdapterPosition()).getImageId());
+                intent.putExtra("price", Products.get(holder.getAdapterPosition()).getPrice());
+                intent.putExtra("stock", Products.get(holder.getAdapterPosition()).getStock());
                 Context.startActivity(intent);
             }
         });
@@ -60,7 +62,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
 
     @Override
     public int getItemCount() {
-        return Products.length;
+        return Products.size();
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {

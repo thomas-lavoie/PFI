@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.pfi.databinding.ActivityProductDetailsBinding;
 
@@ -29,11 +30,22 @@ public class ProductDetailsActivity extends AppCompatActivity {
         binding.setProduct(product);
         binding.imageDetailed.setImageResource(imageId);
 
+        binding.btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProductDetailsActivity.this, ProductsActivity.class);
+                startActivity(intent);
+            }
+        });
+
         binding.btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ProductDetailsActivity.this, CartActivity.class);
-
+                if (product.getStock() > 0) {
+                    Intent intent = new Intent(ProductDetailsActivity.this, ProductsActivity.class);
+                } else {
+                    Toast.makeText(ProductDetailsActivity.this, R.string.outOfStock, Toast.LENGTH_SHORT);
+                }
             }
         });
     }

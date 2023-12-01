@@ -49,4 +49,8 @@ public class Product {
         else
             Stock = stock;
     }
+
+    public void buyProduct(int amount) {
+        Stock -= amount;
+    }
 }
