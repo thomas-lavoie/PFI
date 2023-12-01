@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PFI</string>
+
+    <!-- MainActivity -->
+    <string name="usernameHint">Nom d\'utilisateur</string>
+    <string name="passwordHint">Mot de passe</string>
+    <string name="btnLogin">Se connecter</string>
+    <string name="invalidLogin">Nom d\'utilisateur et/ou mot de passe incorrect</string>
+
+    <!-- ProductsActivity -->
+    <string name="welcome">Bienvenue, %s</string>
+    <string name="loginTitle">Connection</string>
+
+    <!-- Products -->
+    <string name="sapiens">Sapiens : Une brève histoire de l\'humanité</string>
+    <string name="sapiensSeller">Yuval Noah Harari</string>
+    <string name="sapiensDesc">Une exploration captivante de l\'histoire et de l\'impact de l\'Homo sapiens.</string>
+
+    <string name="educated">Une éducation</string>
+    <string name="educatedSeller">Tara Westover</string>
+    <string name="educatedDesc">Un mémoire sur une femme qui grandit dans un foyer strict et abusif, mais qui finit par s\'échapper pour découvrir le monde grâce à l\'éducation.</string>
+
+    <string name="theGreatGatsby">Gatsby le Magnifique</string>
+    <string name="theGreatGatsbySeller">F. Scott Fitzgerald</string>
+    <string name="theGreatGatsbyDesc">Un roman classique explorant les thèmes de la décadence, de l\'idéalisme et du rêve américain.</string>
+
+    <string name="toKillAMockingbird">Ne tirez pas sur l\'oiseau moqueur</string>
+    <string name="toKillAMockingbirdSeller">Harper Lee</string>
+    <string name="toKillAMockingbirdDesc">Un roman intemporel abordant l\'injustice raciale dans le Sud américain.</string>
+
+    <string name="alchemist">L\'Alchimiste</string>
+    <string name="alchemistSeller">Paulo Coelho</string>
+    <string name="alchemistDesc">Un roman philosophique sur la poursuite des rêves et de la légende personnelle.</string>
+
+    <string name="thinkingFastSlow">Pensée rapide, pensée lente</string>
+    <string name="thinkingFastSlowSeller">Daniel Kahneman</string>
+    <string name="thinkingFastSlowDesc">Une exploration complète des deux systèmes qui guident notre façon de penser : le système 1 et le système 2.</string>
+
+    <string name="immortalLife">La vie immortelle d\'Henrietta Lacks</string>
+    <string name="immortalLifeSeller">Rebecca Skloot</string>
+    <string name="immortalLifeDesc">Un livre de non-fiction racontant l\'histoire d\'Henrietta Lacks, dont les cellules ont été utilisées sans son consentement pour des contributions médicales importantes.</string>
+
+    <string name="hitchhikersGuide">H2G2 : Le Guide du voyageur galactique</string>
+    <string name="hitchhikersGuideSeller">Douglas Adams</string>
+    <string name="hitchhikersGuideDesc">Une série de science-fiction humoristique suivant les mésaventures d\'un humain involontaire.</string>
+
+    <string name="catcherInTheRye">L\'Attrape-Cœurs</string>
+    <string name="catcherInTheRyeSeller">J.D. Salinger</string>
+    <string name="catcherInTheRyeDesc">Un roman classique explorant les défis de l\'adolescence et la quête d\'identité.</string>
+
+    <string name="powerOfHabit">Le Pouvoir des habitudes : Changer un rien pour tout changer</string>
+    <string name="powerOfHabitSeller">Charles Duhigg</string>
+    <string name="powerOfHabitDesc">Une exploration de la science derrière les habitudes et comment elles peuvent être transformées.</string>
+
+    <string name="girlOnTheTrain">La Fille du train</string>
+    <string name="girlOnTheTrainSeller">Paula Hawkins</string>
+    <string name="girlOnTheTrainDesc">Un thriller psychologique qui tient les lecteurs en haleine.</string>
+
+    <string name="quiet">Silence : Comment les introvertis peuvent changer le monde</string>
+    <string name="quietSeller">Susan Cain</string>
+    <string name="quietDesc">Une exploration des forces et des qualités des introvertis dans une société principalement extravertie.</string>
+
+    <string name="artOfWar">L\'Art de la guerre</string>
+    <string name="artOfWarSeller">Sun Tzu</string>
+    <string name="artOfWarDesc">Un ancien traité militaire chinois sur la stratégie et les tactiques.</string>
+
+    <string name="anneFrankDiary">Le Journal d\'Anne Frank</string>
+    <string name="anneFrankDiarySeller">Anne Frank</string>
+    <string name="anneFrankDiaryDesc">Le poignant journal d\'Anne Frank, une jeune fille juive se cachant des nazis pendant la Seconde Guerre mondiale.</string>
+
+    <string name="sevenHabits">Les 7 habitudes de ceux qui réalisent tout ce qu\'ils entreprennent</string>
+    <string name="sevenHabitsSeller">Stephen R. Covey</string>
+    <string name="sevenHabitsDesc">Un livre d\'auto-assistance offrant une approche holistique de l\'efficacité personnelle et professionnelle.</string>
+
+    <string name="lordOfTheRings">Le Seigneur des Anneaux</string>
+    <string name="lordOfTheRingsSeller">J.R.R. Tolkien</string>
+    <string name="lordOfTheRingsDesc">Une trilogie de fantasy classique explorant les thèmes du pouvoir, de l\'amitié, et de la lutte entre le bien et le mal.</string>
+
+    <!-- -->
+    <!-- -->
+    <!-- -->
+    <!-- -->
+</resources>

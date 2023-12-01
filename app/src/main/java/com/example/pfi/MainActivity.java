@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 if (validLogin) {
                     Intent intent = new Intent(MainActivity.this, ProductsActivity.class);
                     intent.putExtra("username", binding.usernameText.getText().toString());
-                    intent.putExtra("password", binding.usernameText.getText().toString());
+                    intent.putExtra("password", binding.passwordText.getText().toString());
                     startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, getResources().getString(R.string.invalidLogin), Toast.LENGTH_SHORT).show();

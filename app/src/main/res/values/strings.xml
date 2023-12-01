@@ -2,7 +2,6 @@
     <string name="app_name">PFI</string>
 
     <!-- MainActivity -->
-    <string name="loginTitle" translatable="false">Log in</string>
     <string name="usernameHint">Username</string>
     <string name="passwordHint">Password</string>
     <string name="btnLogin">Log in</string>
@@ -10,6 +9,72 @@
 
     <!-- ProductsActivity -->
     <string name="welcome">Welcome, %s</string>
+    <string name="loginTitle">Log in</string>
+
+    <!-- Products -->
+    <string name="sapiens">Sapiens: A Brief History of Humankind</string>
+    <string name="sapiensSeller">Yuval Noah Harari</string>
+    <string name="sapiensDesc">A compelling exploration of the history and impact of Homo sapiens.</string>
+
+    <string name="educated">Educated</string>
+    <string name="educatedSeller">Tara Westover</string>
+    <string name="educatedDesc">A memoir about a woman who grows up in a strict and abusive household but eventually escapes to learn about the wider world through education.</string>
+
+    <string name="theGreatGatsby">The Great Gatsby</string>
+    <string name="theGreatGatsbySeller">F. Scott Fitzgerald</string>
+    <string name="theGreatGatsbyDesc">A classic novel exploring themes of decadence, idealism, and the American Dream.</string>
+
+    <string name="toKillAMockingbird">To Kill a Mockingbird</string>
+    <string name="toKillAMockingbirdSeller">Harper Lee</string>
+    <string name="toKillAMockingbirdDesc">A timeless novel addressing racial injustice in the American South.</string>
+
+    <string name="alchemist">The Alchemist</string>
+    <string name="alchemistSeller">Paulo Coelho</string>
+    <string name="alchemistDesc">A philosophical novel about pursuing one\'s dreams and personal legend.</string>
+
+    <string name="thinkingFastSlow">Thinking, Fast and Slow</string>
+    <string name="thinkingFastSlowSeller">Daniel Kahneman</string>
+    <string name="thinkingFastSlowDesc">A comprehensive exploration of the two systems that drive the way we think — System 1 and System 2.</string>
+
+    <string name="immortalLife">The Immortal Life of Henrietta Lacks</string>
+    <string name="immortalLifeSeller">Rebecca Skloot</string>
+    <string name="immortalLifeDesc">A non-fiction book that tells the story of Henrietta Lacks, whose cells were used without her knowledge to make significant medical contributions.</string>
+
+    <string name="hitchhikersGuide">The Hitchhiker\'s Guide to the Galaxy</string>
+    <string name="hitchhikersGuideSeller">Douglas Adams</string>
+    <string name="hitchhikersGuideDesc">A humorous science fiction series following the misadventures of an unwitting human.</string>
+
+    <string name="catcherInTheRye">The Catcher in the Rye</string>
+    <string name="catcherInTheRyeSeller">J.D. Salinger</string>
+    <string name="catcherInTheRyeDesc">A classic novel that explores the challenges of adolescence and the search for identity.</string>
+
+    <string name="powerOfHabit">The Power of Habit: Why We Do What We Do in Life and Business</string>
+    <string name="powerOfHabitSeller">Charles Duhigg</string>
+    <string name="powerOfHabitDesc">An exploration of the science behind habits and how they can be transformed.</string>
+
+    <string name="girlOnTheTrain">The Girl on the Train</string>
+    <string name="girlOnTheTrainSeller">Paula Hawkins</string>
+    <string name="girlOnTheTrainDesc">A psychological thriller that keeps readers on the edge of their seats.</string>
+
+    <string name="quiet">Quiet: The Power of Introverts in a World That Can\'t Stop Talking</string>
+    <string name="quietSeller">Susan Cain</string>
+    <string name="quietDesc">An exploration of the strengths and qualities of introverts in a predominantly extroverted society.</string>
+
+    <string name="artOfWar">The Art of War</string>
+    <string name="artOfWarSeller">Sun Tzu</string>
+    <string name="artOfWarDesc">An ancient Chinese military treatise on strategy and tactics.</string>
+
+    <string name="anneFrankDiary">The Diary of a Young Girl</string>
+    <string name="anneFrankDiarySeller">Anne Frank</string>
+    <string name="anneFrankDiaryDesc">The poignant diary of Anne Frank, a Jewish girl hiding from the Nazis during World War II.</string>
+
+    <string name="sevenHabits">The 7 Habits of Highly Effective People</string>
+    <string name="sevenHabitsSeller">Stephen R. Covey</string>
+    <string name="sevenHabitsDesc">A self-help book offering a holistic approach to personal and professional effectiveness.</string>
+
+    <string name="lordOfTheRings">The Lord of the Rings</string>
+    <string name="lordOfTheRingsSeller">J.R.R. Tolkien</string>
+    <string name="lordOfTheRingsDesc">A classic fantasy trilogy exploring themes of power, friendship, and the battle between good and evil.</string>
 
     <!-- -->
     <!-- -->
