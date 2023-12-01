@@ -25,7 +25,23 @@ public class ProductsActivity extends AppCompatActivity {
         Client client = new Client(getIntent().getStringExtra("username"), getIntent().getStringExtra("password"));
         binding.setClient(client);
 
-        // Création des produits
+        Product[] products = CreateProducts();
+
+        // Affichage des produits
+        ProductAdapter adapter = new ProductAdapter(getApplicationContext(), products);
+        binding.recyclerProducts.setAdapter(adapter);
+        binding.recyclerProducts.setLayoutManager(new LinearLayoutManager(this));
+        binding.recyclerProducts.setItemAnimator(new DefaultItemAnimator());
+        binding.recyclerProducts.setHasFixedSize(true);
+
+
+    }
+
+    /**
+     * Crée un tableau de produits.
+     * @return Un tableau de produits.
+     */
+    Product[] CreateProducts() {
         Product[] products = new Product[16];
         products[0] = new Product(getResources().getString(R.string.sapiens), getResources().getString(R.string.sapiensSeller), getResources().getString(R.string.sapiensDesc), R.drawable.sapiens, 14.99, 3);
         products[1] = new Product(getResources().getString(R.string.educated), getResources().getString(R.string.educatedSeller), getResources().getString(R.string.educatedDesc), R.drawable.educated, 19.99, 13);
@@ -43,14 +59,6 @@ public class ProductsActivity extends AppCompatActivity {
         products[13] = new Product(getResources().getString(R.string.anneFrankDiary), getResources().getString(R.string.anneFrankDiarySeller), getResources().getString(R.string.anneFrankDiaryDesc), R.drawable.anne_frank_diary, 17.99, 37);
         products[14] = new Product(getResources().getString(R.string.sevenHabits), getResources().getString(R.string.sevenHabitsSeller), getResources().getString(R.string.sevenHabitsDesc), R.drawable.seven_habits, 23.99, 14);
         products[15] = new Product(getResources().getString(R.string.lordOfTheRings), getResources().getString(R.string.lordOfTheRingsSeller), getResources().getString(R.string.lordOfTheRingsDesc), R.drawable.lord_of_the_rings, 29.99, 51);
-
-        // Affichage des produits
-        ProductAdapter adapter = new ProductAdapter(getApplicationContext(), products);
-        binding.recyclerProducts.setAdapter(adapter);
-        binding.recyclerProducts.setLayoutManager(new LinearLayoutManager(this));
-        binding.recyclerProducts.setItemAnimator(new DefaultItemAnimator());
-        binding.recyclerProducts.setHasFixedSize(true);
-
-
+        return products;
     }
 }

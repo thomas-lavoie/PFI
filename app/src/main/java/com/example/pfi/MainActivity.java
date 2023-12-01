@@ -22,12 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Création des clients
-        Client[] clients = new Client[3];
-        clients[0] = new Client("Thomas", "abc");
-        clients[1] = new Client("Eric", "qwerty123456");
-        clients[2] = new Client("Joe", "Joe");
-
+        Client[] clients = CreateClients();
 
         binding = DataBindingUtil.setContentView(MainActivity.this, R.layout.activity_main);
 
@@ -50,5 +45,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    /**
+     * Crée un tableau de clients.
+     * @return Un tableau de clients.
+     */
+    Client[] CreateClients() {
+        Client[] clients = new Client[3];
+        clients[0] = new Client("Thomas", "abc");
+        clients[1] = new Client("Eric", "qwerty123456");
+        clients[2] = new Client("Joe", "Joe");
+        return clients;
     }
 }
