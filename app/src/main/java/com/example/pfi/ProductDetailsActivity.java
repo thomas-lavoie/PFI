@@ -1,6 +1,7 @@
 package com.example.pfi;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,11 +17,17 @@ public class ProductDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
 
-        binding.imageDetailed.setImageResource(getIntent().getIntExtra("imageId", R.drawable.books));
-        binding.nameDetailed.setText(getIntent().getStringExtra("name"));
-        binding.sellerDetailed.setText(getIntent().getStringExtra("seller"));
-        binding.priceDetailed.setText(String.valueOf(getIntent().getDoubleExtra("price", 24.99)));
-        binding.descriptionDetailed.setText(getIntent().getStringExtra("description"));
+        binding = DataBindingUtil.setContentView(ProductDetailsActivity.this, R.layout.activity_product_details);
+        String name = getIntent().getStringExtra("name");
+        String seller = getIntent().getStringExtra("seller");
+        String description = getIntent().getStringExtra("description");
+        int imageId = getIntent().getIntExtra("imageId", R.drawable.books);
+        double price = getIntent().getDoubleExtra("price", 24.99);
+        int stock = getIntent().getIntExtra("stock", 0);
+
+        Product product = new Product(name, seller, description, imageId, price, stock);
+        binding.setProduct(product);
+        binding.imageDetailed.setImageResource(imageId);
 
         binding.btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override

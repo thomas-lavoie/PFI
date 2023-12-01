@@ -12,7 +12,9 @@
     <string name="loginTitle">Log in</string>
 
     <!-- ProductDetailsActivity -->
+    <string name="sellerDetailed">By %s</string>
     <string name="priceDetailed">$%s</string>
+    <string name="stockDetailed">Stock: %s</string>
     <string name="btnAddToCart">Add to cart</string>
 
     <!-- Products -->
