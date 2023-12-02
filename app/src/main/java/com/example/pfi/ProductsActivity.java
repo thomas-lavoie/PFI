@@ -6,8 +6,11 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.pfi.databinding.ActivityProductsBinding;
 
@@ -40,6 +43,16 @@ public class ProductsActivity extends AppCompatActivity {
         binding.recyclerProducts.setItemAnimator(new DefaultItemAnimator());
         binding.recyclerProducts.setHasFixedSize(true);
 
-
+        binding.btnGoToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Cart.count() > 0) {
+                    Intent intent = new Intent(ProductsActivity.this, CartActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(ProductsActivity.this, getResources().getString(R.string.emptyCartError), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }

@@ -42,7 +42,9 @@ public class ProductDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (product.getStock() > 0) {
+                    Cart.addToCart(product);
                     Intent intent = new Intent(ProductDetailsActivity.this, ProductsActivity.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(ProductDetailsActivity.this, R.string.outOfStock, Toast.LENGTH_SHORT);
                 }

@@ -2,6 +2,7 @@
     <string name="app_name">PFI</string>
 
     <!-- MainActivity -->
+    <string name="loginTitle">Log in</string>
     <string name="usernameHint">Username</string>
     <string name="passwordHint">Password</string>
     <string name="btnLogin">Log in</string>
@@ -9,15 +10,23 @@
 
     <!-- ProductsActivity -->
     <string name="welcome">Welcome, %s</string>
-    <string name="loginTitle">Log in</string>
+    <string name="btnGoToCartDescription">Go to cart</string>
+    <string name="emptyCartError">Your cart is empty</string>
 
     <!-- ProductDetailsActivity -->
     <string name="sellerDetailed">By %s</string>
     <string name="priceDetailed">$%s</string>
     <string name="stockDetailed">Stock: %s</string>
-    <string name="btnBack">Back</string>
     <string name="btnAddToCart">Add to cart</string>
     <string name="outOfStock">This product is out of stock</string>
+    
+    <!-- CartActivity -->
+    <string name="cartTitle">My cart</string>
+    <string name="btnRemoveDescription">Remove item from cart</string>
+
+    <!-- General purpose -->
+    <string name="btnBack">Back</string>
+    <string name="btnPurchase">Purchase</string>
 
     <!-- Products -->
     <string name="sapiens">Sapiens: A Brief History of Humankind</string>
