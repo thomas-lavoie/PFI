@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.pfi.databinding.ActivityCartBinding;
 
@@ -33,6 +34,18 @@ public class CartActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(CartActivity.this, ProductsActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        binding.btnPurchaseCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Cart.count() > 0) {
+                    Intent intent = new Intent(CartActivity.this, ConfirmPurchaseActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(CartActivity.this, getString(R.string.emptyCartError), Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

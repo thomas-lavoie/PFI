@@ -25,4 +25,12 @@ public class Cart {
     public static void clearCart() {
         cart.clear();
     }
+
+    public static double getTotalAmount() {
+        double totalAmount = 0;
+        for (int i = 0; i < cart.size(); i++) {
+            totalAmount += cart.get(i).getPrice();
+        }
+        return totalAmount;
+    }
 }

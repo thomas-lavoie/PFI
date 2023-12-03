@@ -49,7 +49,6 @@ public class ProductInCartAdapter extends RecyclerView.Adapter<ProductInCartAdap
             @Override
             public void onClick(View v) {
                 Cart.removeFromCart(Products.get(holder.getAdapterPosition()));
-                Products.remove(holder.getAdapterPosition() - 1);
                 notifyItemRemoved(holder.getAdapterPosition());
             }
         });

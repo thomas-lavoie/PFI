@@ -11,7 +11,6 @@
     <!-- ProductsActivity -->
     <string name="welcome">Welcome, %s</string>
     <string name="btnGoToCartDescription">Go to cart</string>
-    <string name="emptyCartError">Your cart is empty</string>
 
     <!-- ProductDetailsActivity -->
     <string name="sellerDetailed">By %s</string>
@@ -19,14 +18,21 @@
     <string name="stockDetailed">Stock: %s</string>
     <string name="btnAddToCart">Add to cart</string>
     <string name="outOfStock">This product is out of stock</string>
-    
+
     <!-- CartActivity -->
     <string name="cartTitle">My cart</string>
     <string name="btnRemoveDescription">Remove item from cart</string>
+    <string name="emptyCartError">You can\'t purchase an empty cart</string>
+
+    <!-- ConfirmPurchaseActivity -->
+    <string name="confirmPurchaseTitle">Are you sure you wish to purchase this cart?</string>
+    <string name="totalAmount">Total: $%s</string>
+    <string name="purchased">Purchase confirmed!</string>
 
     <!-- General purpose -->
     <string name="btnBack">Back</string>
     <string name="btnPurchase">Purchase</string>
+    <string name="btnCancel">Cancel</string>
 
     <!-- Products -->
     <string name="sapiens">Sapiens: A Brief History of Humankind</string>

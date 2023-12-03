@@ -12,7 +12,6 @@
     <!-- ProductsActivity -->
     <string name="welcome">Bienvenue, %s</string>
     <string name="btnGoToCartDescription">Aller au panier</string>
-    <string name="emptyCartError">Votre panier est vide</string>
 
     <!-- ProductDetailsActivity -->
     <string name="sellerDetailed">Par: %s</string>
@@ -24,10 +23,17 @@
     <!-- CartActivity -->
     <string name="cartTitle">Mon panier</string>
     <string name="btnRemoveDescription">Retirer l\'item du panier</string>
+    <string name="emptyCartError">Vous ne pouvez pas acheter un panier vide</string>
+
+    <!-- ConfirmPurchaseActivity -->
+    <string name="confirmPurchaseTitle">Êtes-vous certain de vouloir acheter ce panier?</string>
+    <string name="totalAmount">Total: $%s</string>
+    <string name="purchased">Achat confirmé!</string>
 
     <!-- Usage general -->
     <string name="btnBack">Retour</string>
     <string name="btnPurchase">Acheter</string>
+    <string name="btnCancel">Annuler</string>
 
     <!-- Products -->
     <string name="sapiens">Sapiens : Une brève histoire de l\'humanité</string>

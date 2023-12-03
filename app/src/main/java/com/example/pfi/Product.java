@@ -4,53 +4,53 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 
 public class Product {
-    private String Name;
-    private String Seller;
-    private String Description;
-    private int ImageId;
-    private double Price;
-    private int Stock;
+    private String name;
+    private String seller;
+    private String description;
+    private int imageId;
+    private double price;
+    private int stock;
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public String getSeller() {
-        return Seller;
+        return seller;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public int getImageId() {
-        return ImageId;
+        return imageId;
     }
 
     public double getPrice() {
-        return Price;
+        return price;
     }
 
     public int getStock() {
-        return Stock;
+        return stock;
     }
 
     public Product(String name, String seller, String description, int imageId, double price, int stock) {
-        Name = name;
-        Seller = seller;
-        Description = description;
-        ImageId = imageId;
+        this.name = name;
+        this.seller = seller;
+        this.description = description;
+        this.imageId = imageId;
         if (price <= 0)
-            Price = 19.99;
+            this.price = 19.99;
         else
-            Price = price;
+            this.price = price;
         if (stock < 0)
-            Stock = 0;
+            this.stock = 0;
         else
-            Stock = stock;
+            this.stock = stock;
     }
 
     public void buyProduct(int amount) {
-        Stock -= amount;
+        stock = stock - amount;
     }
 }

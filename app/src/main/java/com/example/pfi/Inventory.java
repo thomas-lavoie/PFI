@@ -16,19 +16,20 @@ public class Inventory {
         inventory.addAll(Arrays.asList(product));
     }
 
-    public static void purchase() {
+    public static void purchase(List<Product> products, Boolean isFromCart) {
         for (int i = 0; i < inventory.size(); i++) {
-            for (int j = 0; j < Cart.count(); j++) {
-                if (inventory.get(i).getName().equals(Cart.getCart().get(j).getName())) {
+            for (int j = 0; j < products.size(); j++) {
+                if (inventory.get(i).getName().equals(products.get(j).getName())) {
                     if (inventory.get(i).getStock() == 1) {
                         inventory.remove(i);
                     } else {
                         inventory.get(i).buyProduct(1);
                     }
-                    Cart.removeFromCart(Cart.getCart().get(j));
                 }
             }
         }
-        Cart.clearCart();
+        if (isFromCart) {
+            Cart.clearCart();
+        }
     }
 }

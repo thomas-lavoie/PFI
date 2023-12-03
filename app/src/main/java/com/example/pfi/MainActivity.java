@@ -32,12 +32,11 @@ public class MainActivity extends AppCompatActivity {
                 for (int i = 0; i < clients.length; i++) {
                     if (clients[i].validateLogin(binding.usernameText.getText().toString(), binding.passwordText.getText().toString())) {
                         validLogin = true;
+                        Client.setLoggedInClient(clients[i]);
                     }
                 }
                 if (validLogin) {
                     Intent intent = new Intent(MainActivity.this, ProductsActivity.class);
-                    intent.putExtra("username", binding.usernameText.getText().toString());
-                    intent.putExtra("password", binding.passwordText.getText().toString());
                     startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, getResources().getString(R.string.invalidLogin), Toast.LENGTH_SHORT).show();
