@@ -12,6 +12,8 @@
     <!-- ProductsActivity -->
     <string name="welcome">Bienvenue, %s</string>
     <string name="btnGoToCartDescription">Aller au panier</string>
+    <string name="discount">Solde des fetes!</string>
+    <string name="easterEgg">Joyeuse fetes Mme Jabbour!</string>
 
     <!-- ProductDetailsActivity -->
     <string name="sellerDetailed">Par: %s</string>

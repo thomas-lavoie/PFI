@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,11 +20,16 @@ import org.w3c.dom.Text;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.RejectedExecutionException;
 
 public class ProductsActivity extends AppCompatActivity {
     ActivityProductsBinding binding;
     private List<Product> products;
     private Client client;
+    private Boolean threadDiscount;
+    private int discountBackgroundColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +40,15 @@ public class ProductsActivity extends AppCompatActivity {
             Toast.makeText(ProductsActivity.this, getString(R.string.purchased), Toast.LENGTH_LONG).show();
         }
 
+        threadDiscount = true;
+        discountBackgroundColor = ProductsActivity.this.getColor(R.color.green);
         binding = DataBindingUtil.setContentView(ProductsActivity.this, R.layout.activity_products);
-
         products = Inventory.getInventory();
         client = Client.getLoggedInClient();
-
         binding.setClient(client);
+
+        // Commencer le thread pour le changement de couleur du solde
+        new ExecutorDiscountColor().discountThread();
 
         // Affichage des produits
         ProductAdapter adapter = new ProductAdapter(getApplicationContext(), products);
@@ -51,19 +60,44 @@ public class ProductsActivity extends AppCompatActivity {
         binding.btnGoToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                threadDiscount = false;
                 Intent intent = new Intent(ProductsActivity.this, CartActivity.class);
                 startActivity(intent);
-
-                /* Mecanique que je ne pense pas me servir. Je suis incertain
-                if (Cart.count() > 0) {
-                    Intent intent = new Intent(ProductsActivity.this, CartActivity.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(ProductsActivity.this, getResources().getString(R.string.emptyCartError), Toast.LENGTH_SHORT).show();
-                }
-                */
             }
         });
+    }
+
+    private class ExecutorDiscountColor implements Executor {
+        @Override
+        public void execute(Runnable command) {
+            new Thread(command).start();
+        }
+        public void discountThread() {
+            execute(new Runnable() {
+                @Override
+                public void run() {
+                    while (threadDiscount) {
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                if (discountBackgroundColor == ProductsActivity.this.getColor(R.color.red)) {
+                                    discountBackgroundColor = ProductsActivity.this.getColor(R.color.green);
+                                    binding.discount.setBackgroundColor(discountBackgroundColor);
+                                }
+                                else{
+                                    discountBackgroundColor = ProductsActivity.this.getColor(R.color.red);
+                                    binding.discount.setBackgroundColor(discountBackgroundColor);
+                                }
+                            }
+                        });
+                    }
+                }
+            });
+        }
     }
 }

@@ -11,6 +11,8 @@
     <!-- ProductsActivity -->
     <string name="welcome">Welcome, %s</string>
     <string name="btnGoToCartDescription">Go to cart</string>
+    <string name="discount">Holiday sale!</string>
+    <string name="easterEgg">Happy holidays Miss Jabbour!</string>
 
     <!-- ProductDetailsActivity -->
     <string name="sellerDetailed">By %s</string>
