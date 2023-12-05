@@ -12,6 +12,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,6 +51,10 @@ public class ProductsActivity extends AppCompatActivity {
         products = Inventory.getInventory();
         client = Client.getLoggedInClient();
         binding.setClient(client);
+
+        Animation animDiscount = AnimationUtils.loadAnimation(this, R.anim.fadein);
+        binding.discount.startAnimation(animDiscount);
+        binding.imageBooks.startAnimation(animDiscount);
 
         // Commencer le thread pour le changement de couleur du solde
         new ExecutorDiscountColor().discountThread();

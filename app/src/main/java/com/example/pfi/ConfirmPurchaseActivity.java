@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import com.example.pfi.databinding.ActivityConfirmPurchaseBinding;
@@ -24,6 +26,9 @@ public class ConfirmPurchaseActivity extends AppCompatActivity {
         Uri uri2 = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.gradient2);
         binding.videoView2.setVideoURI(uri2);
         binding.videoView2.start();
+
+        Animation animCart = AnimationUtils.loadAnimation(ConfirmPurchaseActivity.this, R.anim.zoomin);
+        binding.imageView.startAnimation(animCart);
 
         binding.totalAmount.setText(String.format(getString(R.string.totalAmount), String.valueOf(Cart.getTotalAmount())));
 
