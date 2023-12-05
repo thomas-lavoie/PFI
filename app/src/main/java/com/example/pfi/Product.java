@@ -35,6 +35,15 @@ public class Product {
         return stock;
     }
 
+    /**
+     * Crée un nouveau produit.
+     * @param name Le nom du produit.
+     * @param seller Le vendeur du produit.
+     * @param description La description du produit.
+     * @param imageId L'identifiant de l'image du produit.
+     * @param price Le prix du produit.
+     * @param stock La quantité disponible du produit.
+     */
     public Product(String name, String seller, String description, int imageId, double price, int stock) {
         this.name = name;
         this.seller = seller;
@@ -50,6 +59,10 @@ public class Product {
             this.stock = stock;
     }
 
+    /**
+     * Diminue le stock d'un produit après qu'il ait été acheté.
+     * @param amount La quantité du produit acheté.
+     */
     public void buyProduct(int amount) {
         stock = stock - amount;
     }

@@ -67,6 +67,9 @@ public class ProductsActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Permet de changer la couleur du message de solde de manière asynchrone.
+     */
     private class ExecutorDiscountColor implements Executor {
         @Override
         public void execute(Runnable command) {

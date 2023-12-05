@@ -1,4 +1,7 @@
-// Par Thomas Lavoie et Philip Zeng
+/**
+ * @author Thomas Lavoie
+ * @author Philip Zeng
+ */
 
 package com.example.pfi;
 

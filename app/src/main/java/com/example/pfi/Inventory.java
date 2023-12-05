@@ -16,6 +16,11 @@ public class Inventory {
         inventory.addAll(Arrays.asList(product));
     }
 
+    /**
+     * Enlève les produits achetés de l'inventaire ou diminue le stock, puis nettoie le panier si l'achat a été fait à partir d'un panier.
+     * @param products Les produits à enlever/diminuer.
+     * @param isFromCart Indique si l'achat a été effectué à partir d'un panier.
+     */
     public static void purchase(List<Product> products, Boolean isFromCart) {
         for (int i = 0; i < inventory.size(); i++) {
             for (int j = 0; j < products.size(); j++) {
