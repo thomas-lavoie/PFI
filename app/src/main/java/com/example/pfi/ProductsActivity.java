@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,6 +39,8 @@ public class ProductsActivity extends AppCompatActivity {
 
         if (getIntent().getBooleanExtra("purchased", false)) {
             Toast.makeText(ProductsActivity.this, getString(R.string.purchased), Toast.LENGTH_LONG).show();
+            MediaPlayer mediaPlayerSuccess = MediaPlayer.create(ProductsActivity.this, R.raw.success);
+            mediaPlayerSuccess.start();
         }
 
         threadDiscount = true;
@@ -71,6 +74,7 @@ public class ProductsActivity extends AppCompatActivity {
      * Permet de changer la couleur du message de solde de manière asynchrone.
      */
     private class ExecutorDiscountColor implements Executor {
+        int compte = 0;
         @Override
         public void execute(Runnable command) {
             new Thread(command).start();
@@ -96,6 +100,14 @@ public class ProductsActivity extends AppCompatActivity {
                                     discountBackgroundColor = ProductsActivity.this.getColor(R.color.red);
                                     binding.discount.setBackgroundColor(discountBackgroundColor);
                                 }
+
+                                // Easter egg
+                                binding.discount.setText(R.string.discount);
+                                if (compte == 9) {
+                                    binding.discount.setText(R.string.easterEgg);
+                                    compte = 0;
+                                }
+                                compte++;
                             }
                         });
                     }

@@ -12,6 +12,29 @@
         android:layout_height="match_parent"
         tools:context=".ConfirmPurchaseActivity">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="569dp"
+            android:layout_marginTop="128dp"
+            app:layout_constraintBottom_toTopOf="@+id/totalAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cart" />
+
+        <VideoView
+            android:id="@+id/videoView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
         <TextView
             android:id="@+id/confirmPurchaseTitle"
             android:layout_width="0dp"
@@ -19,6 +42,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="64dp"
             android:layout_marginEnd="32dp"
+            android:gravity="center_horizontal"
             android:text="@string/confirmPurchaseTitle"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,12 +53,16 @@
             android:id="@+id/totalAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="128dp"
+            android:background="@color/white"
+            android:padding="10dp"
             android:text="@string/totalAmount"
             android:textSize="34sp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/confirmPurchaseTitle" />
+            app:layout_constraintEnd_toEndOf="@+id/videoView2"
+            app:layout_constraintStart_toStartOf="@+id/videoView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -64,5 +92,6 @@
                 android:layout_weight="1"
                 android:text="@string/btnPurchase" />
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

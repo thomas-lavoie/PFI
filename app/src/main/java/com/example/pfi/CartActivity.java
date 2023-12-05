@@ -6,8 +6,11 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.MediaController;
 import android.widget.Toast;
 
 import com.example.pfi.databinding.ActivityCartBinding;
@@ -29,6 +32,10 @@ public class CartActivity extends AppCompatActivity {
         binding.recyclerCart.setItemAnimator(new DefaultItemAnimator());
         binding.recyclerCart.setHasFixedSize(true);
 
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.gradient);
+        binding.videoView.setVideoURI(uri);
+        binding.videoView.start();
+
         binding.btnBackCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +43,8 @@ public class CartActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        MediaPlayer mediaPlayerError = MediaPlayer.create(CartActivity.this, R.raw.error);
 
         binding.btnPurchaseCart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +54,7 @@ public class CartActivity extends AppCompatActivity {
                     startActivity(intent);
                 } else {
                     Toast.makeText(CartActivity.this, getString(R.string.emptyCartError), Toast.LENGTH_SHORT).show();
+                    mediaPlayerError.start();
                 }
             }
         });
