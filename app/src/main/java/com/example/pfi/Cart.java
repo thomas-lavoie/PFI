@@ -26,6 +26,10 @@ public class Cart {
         cart.clear();
     }
 
+    /**
+     * Calcul La somme du prix des items dans le panier.
+     * @return Le prix total du panier.
+     */
     public static double getTotalAmount() {
         double totalAmount = 0;
         for (int i = 0; i < cart.size(); i++) {
